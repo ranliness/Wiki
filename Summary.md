@@ -1,5 +1,5 @@
 # Summary
 
 * [前言](README.md)
-  * [新人事项](ce-shi.md)
+  * [新手引导](xin-shou-yin-dao.md)
 
