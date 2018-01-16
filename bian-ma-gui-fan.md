@@ -12,10 +12,10 @@
 
   function FOOBar \(\) {}
 
-// good  
-  var fooBar = {};
+       // good  
+       var fooBar = {};
 
-function fooBar \(\) {}
+       function fooBar \(\) {}
 
 ```
 * 当我们为类或者模块命名时, 使用 PascalCase 命名法.
