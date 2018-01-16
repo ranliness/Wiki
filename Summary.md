@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [新手引导](NewGuide.md)
-* [项目规范](xiang-mu-gui-fan.md)
-  * [编码规范](bian-ma-gui-fan.md)
-  * [美术规范](mei-zhu-gui-fan.md)
+* [项目规范](ProjectRule.md)
+  * [编码规范](CodingRule.md)
+  * [美术规范](ArtRule.md)
 
