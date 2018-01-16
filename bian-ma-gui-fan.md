@@ -1,575 +1,574 @@
-##  {#命名规范}
+# 编码规范 {#推荐编码规范}
 
-* ## 命名规范 {#命名规范}
+## 命名规范 {#命名规范}
 
-  * 当我们为变量, 函数和实例命名时, 使用 camelCase 命名法.
+* 当我们为变量, 函数和实例命名时, 使用 camelCase 命名法.
 
-    ```
-    // bad
-    var
-     FOOBar = {};
+  ```
+  // bad
+  var FOOBar = {};
 
-    var
-     foo_bar = {};
+  var
+   foo_bar = {};
 
-    function
-    FOOBar
-     (
-    ) 
-    {}
+  function FOOBar () 
+  {}
 
 
-    // good
-    var
-     fooBar = {};
+  // good
+  var
+   fooBar = {};
 
-    function
-    fooBar
-     (
-    ) 
-    {}
+  function
+  fooBar
+   (
+  ) 
+  {}
 
-    ```
+  ```
 
-  * 当我们为类或者模块命名时, 使用 PascalCase 命名法.
+* 当我们为类或者模块命名时, 使用 PascalCase 命名法.
 
-    ```
-    // bad
-    var
-     foobar = cc.Class({
-        foo: 
-    'foo'
-    ,
-        bar: 
-    'bar'
-    ,
-    });
+  ```
+  // bad
+  var
+   foobar = cc.Class({
+      foo: 
+  'foo'
+  ,
+      bar: 
+  'bar'
+  ,
+  });
 
-    var
-     foobar = 
-    require
-    (
-    'foo-bar'
-    );
-
-
-    // good
-    var
-     FooBar = cc.Class({
-        foo: 
-    'foo'
-    ,
-        bar: 
-    'bar'
-    ,
-    });
-
-    var
-     FooBar = 
-    require
-    (
-    'foo-bar'
-    );
-
-    ```
-
-  * 使用前置下划线`_`当我们为私有属性命名
-
-    ```
-    // bad
-    this
-    .__firstName__ = 
-    'foobar'
-    ;
-
-    this
-    .firstName_ = 
-    'foobar'
-    ;
+  var
+   foobar = 
+  require
+  (
+  'foo-bar'
+  );
 
 
-    // good
-    this
-    ._firstName = 
-    'foobar'
-    ;
+  // good
+  var
+   FooBar = cc.Class({
+      foo: 
+  'foo'
+  ,
+      bar: 
+  'bar'
+  ,
+  });
 
-    ```
+  var
+   FooBar = 
+  require
+  (
+  'foo-bar'
+  );
 
-  * 文件名我们采用 dash 命名法
+  ```
 
-    ```
-    // bad
-    fooBar.js
-    FooBar.js
+* 使用前置下划线`_`当我们为私有属性命名
 
-    // good
-    foo-bar.js
+  ```
+  // bad
+  this
+  .__firstName__ = 
+  'foobar'
+  ;
 
-    ```
-
-  ## 语法规范 {#语法规范}
-
-  * 使用`{}`创建一个 object
-
-    ```
-    // bad
-    var
-     obj = 
-    new
-    Object
-    ();
-
-
-    // good
-    var
-     obj = {};
-
-    ```
-
-  * 使用`[]`创建一个 array
-
-    ```
-    // bad
-    var
-     array = 
-    new
-    Array
-    ();
+  this
+  .firstName_ = 
+  'foobar'
+  ;
 
 
-    // good
-    var
-     array = [];
+  // good
+  this
+  ._firstName = 
+  'foobar'
+  ;
 
-    ```
+  ```
 
-  * 尽可能在 js 代码中使用单引号`''`来定义 string
+* 文件名我们采用 dash 命名法
 
-    ```
-    // bad
-    var
-     str = 
-    "Hello World"
-    ;
+  ```
+  // bad
+  fooBar.js
+  FooBar.js
+
+  // good
+  foo-bar.js
+
+  ```
+
+## 语法规范 {#语法规范}
+
+* 使用`{}`创建一个 object
+
+  ```
+  // bad
+  var
+   obj = 
+  new
+  Object
+  ();
 
 
-    // good
-    var
-     str = 
-    'Hello World'
-    ;
+  // good
+  var
+   obj = {};
 
-    ```
+  ```
 
-  * 多行 string 定义时, 尽可能使用`+`定义
+* 使用`[]`创建一个 array
 
-    ```
-    // bad
-    const
-     errorMessage = 
-    'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.'
-    ;
+  ```
+  // bad
+  var
+   array = 
+  new
+  Array
+  ();
+
+
+  // good
+  var
+   array = [];
+
+  ```
+
+* 尽可能在 js 代码中使用单引号`''`来定义 string
+
+  ```
+  // bad
+  var
+   str = 
+  "Hello World"
+  ;
+
+
+  // good
+  var
+   str = 
+  'Hello World'
+  ;
+
+  ```
+
+* 多行 string 定义时, 尽可能使用`+`定义
+
+  ```
+  // bad
+  const
+   errorMessage = 
+  'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.'
+  ;
 
  
-    // bad
-    const
-     errorMessage = 
-    'This is a super long error that was thrown because \
-     of Batman. When you stop to think about how Batman had anything to do \
-     with this, you would get nowhere \
-     fast.'
-    ;
+  // bad
+  const
+   errorMessage = 
+  'This is a super long error that was thrown because \
+   of Batman. When you stop to think about how Batman had anything to do \
+   with this, you would get nowhere \
+   fast.'
+  ;
 
  
-    // good
-    const
-     errorMessage = 
-    'This is a super long error that was thrown because '
-     +
+  // good
+  const
+   errorMessage = 
+  'This is a super long error that was thrown because '
+   +
    
-    'of Batman. When you stop to think about how Batman had anything to do '
-     +
+  'of Batman. When you stop to think about how Batman had anything to do '
+   +
    
-    'with this, you would get nowhere fast.'
-    ;
+  'with this, you would get nowhere fast.'
+  ;
 
-    ```
+  ```
 
-  * 使用`===`和`!==`而不是`==`和`!=`.
+* 使用`===`和`!==`而不是`==`和`!=`.
 
-  ## 书写规范 {#书写规范}
+## 书写规范 {#书写规范}
 
-  * 根据个人习惯, 和原代码作者格式, 选择 4 个空格或者 2 个空格作为缩进
+* 根据个人习惯, 和原代码作者格式, 选择 4 个空格或者 2 个空格作为缩进
 
-    ```
-    // bad
-    function
-    (
-    ) 
-    {
-    ∙
-    var
-     name;
-    }
-
-
-    // very bad
-    function
-    (
-    ) 
-    {
-    ∙∙
-    <
-    tab
-    >
-    ∙∙
-    var
-     name;
-    }
+  ```
+  // bad
+  function
+  (
+  ) 
+  {
+  ∙
+  var
+   name;
+  }
 
 
-    // good
-    function
-    (
-    ) 
-    {
-    ∙∙
-    var
-     name;
-    }
+  // very bad
+  function
+  (
+  ) 
+  {
+  ∙∙
+  <
+  tab
+  >
+  ∙∙
+  var
+   name;
+  }
 
 
-    // good
-    function
-    (
-    ) 
-    {
-    ∙∙∙∙
-    var
-     name;
-    }
-
-    ```
-
-  * 尽可能将`{`和表达式放在同一行
-
-    ```
-    // bad
-    if
-     ( isFoobar )
-    {
-    }
+  // good
+  function
+  (
+  ) 
+  {
+  ∙∙
+  var
+   name;
+  }
 
 
-    // good
-    if
-     ( isFoobar ) {
-    }
+  // good
+  function
+  (
+  ) 
+  {
+  ∙∙∙∙
+  var
+   name;
+  }
+
+  ```
+
+* 尽可能将`{`和表达式放在同一行
+
+  ```
+  // bad
+  if
+   ( isFoobar )
+  {
+  }
 
 
-    // bad
-    function
-    foobar
-    (
-    )
-
-    {
-    }
+  // good
+  if
+   ( isFoobar ) {
+  }
 
 
-    // good
-    function
-    foobar
-    (
-    ) 
-    {
-    }
+  // bad
+  function
+  foobar
+  (
+  )
+
+  {
+  }
 
 
-    // bad
-    var
-     obj =
-    {
-        foo: 
-    'foo'
-    ,
-        bar: 
-    'bar'
-    ,
-    }
+  // good
+  function
+  foobar
+  (
+  ) 
+  {
+  }
 
 
-    // good
-    var
-     obj = {
-        foo: 
-    'foo'
-    ,
-        bar: 
-    'bar'
-    ,
-    }
+  // bad
+  var
+   obj =
+  {
+      foo: 
+  'foo'
+  ,
+      bar: 
+  'bar'
+  ,
+  }
 
-    ```
 
-  * 在`{`前请空一格
+  // good
+  var
+   obj = {
+      foo: 
+  'foo'
+  ,
+      bar: 
+  'bar'
+  ,
+  }
 
-    ```
-    // bad
-    function
-    test
-    (
-    )
-    {
+  ```
+
+* 在`{`前请空一格
+
+  ```
+  // bad
+  function
+  test
+  (
+  )
+  {
     
-    console
-    .log(
-    'test'
-    );
-    }
+  console
+  .log(
+  'test'
+  );
+  }
 
 
-    // good
-    function
-    test
-    (
-    ) 
-    {
+  // good
+  function
+  test
+  (
+  ) 
+  {
     
-    console
-    .log(
-    'test'
-    );
-    }
+  console
+  .log(
+  'test'
+  );
+  }
 
 
-    // bad
+  // bad
 
-    dog.set(
-    'attr'
-    ,{
-        age: 
-    '1 year'
-    ,
-        breed: 
-    'Bernese Mountain Dog'
-    ,
-    });
+  dog.set(
+  'attr'
+  ,{
+      age: 
+  '1 year'
+  ,
+      breed: 
+  'Bernese Mountain Dog'
+  ,
+  });
 
 
-    // good
+  // good
 
-    dog.set(
-    'attr'
-    , {
-        age: 
-    '1 year'
-    ,
-        breed: 
-    'Bernese Mountain Dog'
-    ,
-    });
+  dog.set(
+  'attr'
+  , {
+      age: 
+  '1 year'
+  ,
+      breed: 
+  'Bernese Mountain Dog'
+  ,
+  });
 
-    ```
+  ```
 
-  * 在逻辑状态表达式 \(`if`,`while`\) 的`(`前请空一格
+* 在逻辑状态表达式 \(`if`,`while`\) 的`(`前请空一格
 
-    ```
-    // bad
-    if
-    (isJedi) {
-         fight ();
-     }
+  ```
+  // bad
+  if
+  (isJedi) {
+       fight ();
+   }
 
  
-    // good
-    if
-     (isJedi) {
-         fight();
-     }
+  // good
+  if
+   (isJedi) {
+       fight();
+   }
 
-    ```
+  ```
 
-  * operator 之间请空一格
+* operator 之间请空一格
 
-    ```
-    // bad
-    var
-     x=y+
-    5
-    ;
+  ```
+  // bad
+  var
+   x=y+
+  5
+  ;
 
 
-    // good
-    var
-     x = y + 
-    5
-    ;
+  // good
+  var
+   x = y + 
+  5
+  ;
 
-    ```
+  ```
 
-  * 在 Block 定义之间请空一行
+* 在 Block 定义之间请空一行
 
-    ```
-    // bad
-    if
-     (foo) {
+  ```
+  // bad
+  if
+   (foo) {
     
-    return
-     bar;
-    }
+  return
+   bar;
+  }
 
-    return
-     baz;
+  return
+   baz;
 
 
-    // good
-    if
-     (foo) {
+  // good
+  if
+   (foo) {
     
-    return
-     bar;
-    }
+  return
+   bar;
+  }
 
 
-    return
-     baz;
+  return
+   baz;
 
 
-    // bad
-    const
-     obj = {
-        foo() {
-        },
-        bar() {
-        },
-    };
+  // bad
+  const
+   obj = {
+      foo() {
+      },
+      bar() {
+      },
+  };
 
-    return
-     obj;
-
-
-    // good
-    const
-     obj = {
-        foo() {
-        },
-
-        bar() {
-        },
-    };
+  return
+   obj;
 
 
-    return
-     obj;
+  // good
+  const
+   obj = {
+      foo() {
+      },
+
+      bar() {
+      },
+  };
 
 
-    // bad
-    const
-     arr = [
+  return
+   obj;
+
+
+  // bad
+  const
+   arr = [
     
-    function
-    foo
-    (
-    ) 
-    {
-        },
+  function
+  foo
+  (
+  ) 
+  {
+      },
     
-    function
-    bar
-    (
-    ) 
-    {
-        },
-    ];
+  function
+  bar
+  (
+  ) 
+  {
+      },
+  ];
 
-    return
-     arr;
+  return
+   arr;
 
 
-    // good
-    const
-     arr = [
+  // good
+  const
+   arr = [
     
-    function
-    foo
-    (
-    ) 
-    {
-        },
+  function
+  foo
+  (
+  ) 
+  {
+      },
 
     
-    function
-    bar
-    (
-    ) 
-    {
-        },
-    ];
+  function
+  bar
+  (
+  ) 
+  {
+      },
+  ];
 
 
-    return
-     arr;
+  return
+   arr;
 
-    ```
+  ```
 
-  * 不要使用前置逗号定义
+* 不要使用前置逗号定义
 
-    ```
-    // bad
-    var
-     story = [
-          once
-        , upon
-        , aTime
-    ];
-
-
-    // good
-    var
-     story = [
-        once,
-        upon,
-        aTime,
-    ];
+  ```
+  // bad
+  var
+   story = [
+        once
+      , upon
+      , aTime
+  ];
 
 
-    // bad
-    var
-     hero = {
-          firstName: 
-    'Ada'
-
-        , lastName: 
-    'Lovelace'
-
-        , birthYear: 
-    1815
-
-        , superPower: 
-    'computers'
-
-    };
+  // good
+  var
+   story = [
+      once,
+      upon,
+      aTime,
+  ];
 
 
-    // good
-    var
-     hero = {
+  // bad
+  var
+   hero = {
         firstName: 
-    'Ada'
-    ,
-        lastName: 
-    'Lovelace'
-    ,
-        birthYear: 
-    1815
-    ,
-        superPower: 
-    'computers'
-    ,
-    };
-    ```
+  'Ada'
+
+      , lastName: 
+  'Lovelace'
+
+      , birthYear: 
+  1815
+
+      , superPower: 
+  'computers'
+
+  };
 
 
+  // good
+  var
+   hero = {
+      firstName: 
+  'Ada'
+  ,
+      lastName: 
+  'Lovelace'
+  ,
+      birthYear: 
+  1815
+  ,
+      superPower: 
+  'computers'
+  ,
+  };
+
+  ```
+
+## 参考 {#参考}
+
+[airbnb/es5](https://github.com/airbnb/javascript/tree/master/es5)
 
