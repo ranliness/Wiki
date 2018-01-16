@@ -4,58 +4,35 @@
 
 * 当我们为变量, 函数和实例命名时, 使用 camelCase 命名法.
 
-  \`\`\`  
-  // bad  
-  var FOOBar = {};
+      ```
+      // bad
+      var FOOBar = {};
+      var foo_bar = {};
+      function FOOBar () {}
 
-  var foo\_bar = {};
+      // good  
+      var fooBar = {};
 
-  function FOOBar \(\) {}
+      function fooBar \(\) {}
 
-       // good  
-       var fooBar = {};
-
-       function fooBar \(\) {}
+\* 当我们为类或者模块命名时, 使用 PascalCase 命名法.
 
 ```
-* 当我们为类或者模块命名时, 使用 PascalCase 命名法.
+// bad
+  var foobar = cc.Class({ 
+  foo: 'foo',
+  bar:'bar',
+  });
+var foobar = require('foo-bar');
+// good
+  var FooBar = cc.Class({
+      foo: 'foo',
+      bar: 'bar',
+  });
+var FooBar = require('foo-bar');
 ```
 
-// bad  
-  var  
-   foobar = cc.Class\({  
-      foo:  
-  'foo'  
-  ,  
-      bar:  
-  'bar'  
-  ,  
-  }\);
 
-var  
-   foobar =  
-  require  
-  \(  
-  'foo-bar'  
-  \);
-
-// good  
-  var  
-   FooBar = cc.Class\({  
-      foo:  
-  'foo'  
-  ,  
-      bar:  
-  'bar'  
-  ,  
-  }\);
-
-var  
-   FooBar =  
-  require  
-  \(  
-  'foo-bar'  
-  \);
 
 * 使用前置下划线`_`当我们为私有属性命名
 
