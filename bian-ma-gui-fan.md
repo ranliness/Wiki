@@ -13,14 +13,9 @@
   function FOOBar \(\) {}
 
 // good  
-  var  
-   fooBar = {};
+  var fooBar = {};
 
-function  
-  fooBar  
-   \(  
-  \)   
-  {}
+function fooBar \(\) {}
 
 ```
 * 当我们为类或者模块命名时, 使用 PascalCase 命名法.
@@ -29,16 +24,16 @@ function
 // bad  
   var  
    foobar = cc.Class\({  
-      foo:   
+      foo:  
   'foo'  
   ,  
-      bar:   
+      bar:  
   'bar'  
   ,  
   }\);
 
 var  
-   foobar =   
+   foobar =  
   require  
   \(  
   'foo-bar'  
@@ -47,37 +42,37 @@ var
 // good  
   var  
    FooBar = cc.Class\({  
-      foo:   
+      foo:  
   'foo'  
   ,  
-      bar:   
+      bar:  
   'bar'  
   ,  
   }\);
 
 var  
-   FooBar =   
+   FooBar =  
   require  
   \(  
   'foo-bar'  
   \);
 
-    * 使用前置下划线`_`当我们为私有属性命名
+* 使用前置下划线`_`当我们为私有属性命名
 
 // bad  
   this  
-  .**firstName** =   
+  .**firstName** =  
   'foobar'  
   ;
 
 this  
-  .firstName\_ =   
+  .firstName\_ =  
   'foobar'  
   ;
 
 // good  
   this  
-  .\_firstName =   
+  .\_firstName =  
   'foobar'  
   ;
 
@@ -98,7 +93,7 @@ this
 
 // bad  
   var  
-   obj =   
+   obj =  
   new  
   Object  
   \(\);
@@ -107,11 +102,11 @@ this
   var  
    obj = {};
 
-    * 使用`[]`创建一个 array
+* 使用`[]`创建一个 array
 
 // bad  
   var  
-   array =   
+   array =  
   new  
   Array  
   \(\);
@@ -120,31 +115,31 @@ this
   var  
    array = \[\];
 
-    * 尽可能在 js 代码中使用单引号`''`来定义 string
+* 尽可能在 js 代码中使用单引号`''`来定义 string
 
 // bad  
   var  
-   str =   
+   str =  
   "Hello World"  
   ;
 
 // good  
   var  
-   str =   
+   str =  
   'Hello World'  
   ;
 
-    * 多行 string 定义时, 尽可能使用`+`定义
+* 多行 string 定义时, 尽可能使用`+`定义
 
 // bad  
   const  
-   errorMessage =   
+   errorMessage =  
   'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.'  
   ;
 
 // bad  
   const  
-   errorMessage =   
+   errorMessage =  
   'This is a super long error that was thrown because \  
    of Batman. When you stop to think about how Batman had anything to do \  
    with this, you would get nowhere \  
@@ -153,7 +148,7 @@ this
 
 // good  
   const  
-   errorMessage =   
+   errorMessage =  
   'This is a super long error that was thrown because '  
    +
 
@@ -163,16 +158,16 @@ this
 'with this, you would get nowhere fast.'  
   ;
 
-    * 使用`===`和`!==`而不是`==`和`!=`.
+* 使用`===`和`!==`而不是`==`和`!=`.
 
-    ## 书写规范 {#书写规范}
+  ## 书写规范 {#书写规范}
 
-    * 根据个人习惯, 和原代码作者格式, 选择 4 个空格或者 2 个空格作为缩进
+* 根据个人习惯, 和原代码作者格式, 选择 4 个空格或者 2 个空格作为缩进
 
 // bad  
   function  
   \(  
-  \)   
+  \)  
   {  
   ∙  
   var  
@@ -182,7 +177,7 @@ this
 // very bad  
   function  
   \(  
-  \)   
+  \)  
   {  
   ∙∙  
   &lt;  
@@ -196,7 +191,7 @@ this
 // good  
   function  
   \(  
-  \)   
+  \)  
   {  
   ∙∙  
   var  
@@ -206,14 +201,14 @@ this
 // good  
   function  
   \(  
-  \)   
+  \)  
   {  
   ∙∙∙∙  
   var  
    name;  
   }
 
-    * 尽可能将`{`和表达式放在同一行
+* 尽可能将`{`和表达式放在同一行
 
 // bad  
   if  
@@ -239,7 +234,7 @@ this
   function  
   foobar  
   \(  
-  \)   
+  \)  
   {  
   }
 
@@ -247,10 +242,10 @@ this
   var  
    obj =  
   {  
-      foo:   
+      foo:  
   'foo'  
   ,  
-      bar:   
+      bar:  
   'bar'  
   ,  
   }
@@ -258,15 +253,15 @@ this
 // good  
   var  
    obj = {  
-      foo:   
+      foo:  
   'foo'  
   ,  
-      bar:   
+      bar:  
   'bar'  
   ,  
   }
 
-    * 在`{`前请空一格
+* 在`{`前请空一格
 
 // bad  
   function  
@@ -285,7 +280,7 @@ console
   function  
   test  
   \(  
-  \)   
+  \)  
   {
 
 console  
@@ -299,10 +294,10 @@ console
 dog.set\(  
   'attr'  
   ,{  
-      age:   
+      age:  
   '1 year'  
   ,  
-      breed:   
+      breed:  
   'Bernese Mountain Dog'  
   ,  
   }\);
@@ -312,15 +307,15 @@ dog.set\(
 dog.set\(  
   'attr'  
   , {  
-      age:   
+      age:  
   '1 year'  
   ,  
-      breed:   
+      breed:  
   'Bernese Mountain Dog'  
   ,  
   }\);
 
-    * 在逻辑状态表达式 \(`if`,`while`\) 的`(`前请空一格
+* 在逻辑状态表达式 \(`if`,`while`\) 的`(`前请空一格
 
 // bad  
   if  
@@ -346,7 +341,7 @@ dog.set\(
 
 // good  
   var  
-   x = y +   
+   x = y +  
   5  
   ;
 
@@ -411,14 +406,14 @@ return
 function  
   foo  
   \(  
-  \)   
+  \)  
   {  
       },
 
 function  
   bar  
   \(  
-  \)   
+  \)  
   {  
       },  
   \];
@@ -433,14 +428,14 @@ return
 function  
   foo  
   \(  
-  \)   
+  \)  
   {  
       },
 
 function  
   bar  
   \(  
-  \)   
+  \)  
   {  
       },  
   \];
@@ -471,23 +466,23 @@ return
 // bad  
   var  
    hero = {  
-        firstName:   
+        firstName:  
   'Ada'
 
 ```
-  , lastName: 
+  , lastName:
 ```
 
 'Lovelace'
 
 ```
-  , birthYear: 
+  , birthYear:
 ```
 
 1815
 
 ```
-  , superPower: 
+  , superPower:
 ```
 
 'computers'
@@ -497,16 +492,16 @@ return
 // good  
   var  
    hero = {  
-      firstName:   
+      firstName:  
   'Ada'  
   ,  
-      lastName:   
+      lastName:  
   'Lovelace'  
   ,  
-      birthYear:   
+      birthYear:  
   1815  
   ,  
-      superPower:   
+      superPower:  
   'computers'  
   ,  
   };
