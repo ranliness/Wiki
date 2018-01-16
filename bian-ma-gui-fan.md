@@ -8,29 +8,26 @@
       // bad
       var FOOBar = {};
       var foo_bar = {};
-      function FOOBar () {}
+      function FOOBar () {}// good  
+        var fooBar = {};
+        function fooBar \(\) {}
 
-
-      // good  
-      var fooBar = {};
-      function fooBar \(\) {}
-
-\* 当我们为类或者模块命名时, 使用 PascalCase 命名法.
+* 当我们为类或者模块命名时, 使用 PascalCase 命名法.
 
 ```
 // bad
-  var foobar = cc.Class({ 
+var foobar = cc.Class({ 
   foo: 'foo',
   bar:'bar',
-  });
+});
 var foobar = require('foo-bar');
 
 
 // good
-  var FooBar = cc.Class({
-      foo: 'foo',
-      bar: 'bar',
-  });
+var FooBar = cc.Class({
+  foo: 'foo',
+  bar: 'bar',
+});
 var FooBar = require('foo-bar');
 ```
 
@@ -52,13 +49,11 @@ this.firstName_ = 'foobar';
 // bad
   fooBar.js
   FooBar.js
-  
-  
+
+
 // good
   foo-bar.js
 ```
-
-
 
     ## 语法规范 {#语法规范}
 
